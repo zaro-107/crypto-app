@@ -1,22 +1,57 @@
-# Crypto Price & ML Prediction Dashboard
+# 🚀 Advanced Multi-Crypto Dashboard (Streamlit + CoinGecko)
 
-A real-time cryptocurrency dashboard built using **Streamlit**, **Binance public API**, and **Machine Learning**.  
-This project displays live crypto prices, historical charts, percentage changes, and ML-based predictions using a Linear Regression model.
-
----
-
-## 🚀 Features
-
-✅ Live crypto prices (BTC, ETH, USDT, SOL, XRP, BNB, DOGE, and more)  
-✅ Fetches market data using the **Binance Public API (No API key required!)**  
-✅ Historical OHLCV charts  
-✅ 7-day and 30-day visualizations  
-✅ ML model predictions (Linear Regression)  
-✅ Real-time updates  
-✅ Mobile + Desktop responsive  
-✅ Ready for deployment (Render / Railway / Heroku)
+This is a fully interactive **multi-cryptocurrency analytics dashboard** built with **Streamlit**, using data from **CoinGecko** (no API key required).  
+It includes **technical indicators, ML predictions, candlestick charts, news, sentiment analysis, and alerts**.
 
 ---
 
-## 📁 Project Structure
+## ✅ Features
 
+### 🔹 Crypto Data (via CoinGecko)
+- Live price, volume, and history (7–365 days)
+- Works without API keys
+
+### 🔹 Built-in Technical Indicators
+- RSI (14)
+- MACD (12–26–9)
+- Bollinger Bands
+- EMA (12 / 26)
+- Stochastic Oscillator
+- VWAP
+- Volatility (rolling 30D)
+
+### 🔹 ML Predictions
+- Linear Regression for next-price prediction
+- Logistic Regression for BUY/SELL trend
+- Optional Random Forest model
+- Accuracy, MAE, profit estimation
+
+### 🔹 Charts & Visualization
+- Interactive candlestick charts using Plotly
+- Indicator overlays
+- Trend tables
+- Summary metrics
+
+### 🔹 News & Sentiment
+- CoinGecko status updates
+- Sentiment analysis using VADER
+- Fear & Greed Index
+
+### 🔹 Alerts
+- MA14 crossover alerts
+- MACD crossover alerts
+
+### 🔹 UI Features
+- Dark/Light theme toggle
+- Auto-refresh every 60 seconds
+- Multi-crypto selection (20+ coins)
+- Tab-based layout (Overview, Indicators, Predictions, Signals, News)
+
+---
+
+## ✅ Installation
+
+### 1️⃣ Clone the repo
+```bash
+git clone <your-repo-url>
+cd crypto-dashboard
