@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+requests
+scikit-learn
+plotly
+streamlit-autorefresh
+xgboost==1.7.5   # optional; remove if you don't want XGBoost
