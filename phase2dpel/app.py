@@ -20,7 +20,11 @@ try:
     from nltk.sentiment.vader import SentimentIntensityAnalyzer
 except Exception:
     nltk_download('vader_lexicon')
-    from nltk.sentiment.vader import SentimentIntensityAnalyzer
+  import nltk
+from nltk.sentiment import SentimentIntensityAnalyzer
+
+# ✅ FIX: Download inside repo (works on all cloud hosts)
+nltk.download('vader_lexicon', quiet=True)
 
 sia = SentimentIntensityAnalyzer()
 
@@ -412,3 +416,4 @@ with tabs[4]:
 # Footer / disclaimers
 st.markdown("---")
 st.markdown("**Notes:** Demo dashboard for educational purposes. Not financial advice. CoinGecko free API used; respect rate-limits for heavy use. For production, consider server-side caching and paid data provider.")
+
