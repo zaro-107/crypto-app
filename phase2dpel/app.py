@@ -14,25 +14,19 @@ from sklearn.linear_model import LinearRegression, LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestRegressor
 from nltk import download as nltk_download
+# --- NLTK VADER setup (for simple sentiment analysis) ---
+import nltk
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
-# --- NLTK VADER setup (for simple sentiment) ---
-try:
-    from nltk.sentiment.vader import SentimentIntensityAnalyzer
-except Exception:
-    nltk_download('vader_lexicon')
-  import nltk
-from nltk.sentiment import SentimentIntensityAnalyzer
-
-# ✅ FIX: Download inside repo (works on all cloud hosts)
+# Download lexicon (works on Streamlit Cloud)
 nltk.download('vader_lexicon', quiet=True)
-
-sia = SentimentIntensityAnalyzer()
-
-# Streamlit config
 st.set_page_config(page_title="Advanced Crypto Dashboard", layout="wide", initial_sidebar_state="expanded")
+
 st.title("🚀 Advanced Multi-Crypto Dashboard (CoinGecko)")
 
-# ---------------------
+# Initialize the sentiment analyzer
+sia = SentimentIntensityAnalyzer()
+
 # Sidebar: config
 # ---------------------
 with st.sidebar:
@@ -416,4 +410,5 @@ with tabs[4]:
 # Footer / disclaimers
 st.markdown("---")
 st.markdown("**Notes:** Demo dashboard for educational purposes. Not financial advice. CoinGecko free API used; respect rate-limits for heavy use. For production, consider server-side caching and paid data provider.")
+
 
